@@ -28,11 +28,21 @@ jobs:
         with:
           path: ./dist
   deploy:
-    runs-on: ubuntu-latest
     needs: build
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      # to deploy to Pages
+      pages: write
+      # to verify the deployment originates from an appropriate source
+      id-token: write
+
     environment:
       name: github-pages
       url: https://example.com
+
+    runs-on: ubuntu-latest
+
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
