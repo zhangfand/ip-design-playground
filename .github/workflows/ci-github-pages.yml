@@ -39,7 +39,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: https://example.com
+      url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
 
