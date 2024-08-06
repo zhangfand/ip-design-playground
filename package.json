@@ -4,11 +4,10 @@
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
-    "ghp": "rm -rf dist && parcel build --public-url /ip-design-playground/ && gh-pages -d dist"
+    "gh-pages": "parcel build --public-url /ip-design-playground/"
   },
   "devDependencies": {
     "buffer": "^6.0.3",
-    "gh-pages": "^6.1.1",
     "parcel": "^2.12.0",
     "process": "^0.11.10"
   },
