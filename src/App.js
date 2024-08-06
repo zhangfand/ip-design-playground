@@ -1,3 +1,10 @@
+import ChatGPT from "./ChatGPT";
+import SD from "./SD";
 export function App() {
-  return <h1>Hello world!</h1>;
+  return (
+    <div>
+      <ChatGPT />;
+      <SD />;
+    </div>
+  );
 }
